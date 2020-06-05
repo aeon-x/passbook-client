@@ -3,7 +3,7 @@ MYSQL:
 
 cd C:\Program Files\MySQL\MySQL Server 8.0\bin & mysql -u root -p
 
-use database; select * from table; show tables; 
+use database; select * from table; show tables; delete from table;
 
 
 REDIS: 
