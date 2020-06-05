@@ -38,7 +38,8 @@ public class TokenUploadController {
         this.redisTemplate = redisTemplate;
     }
 
-    // 3617cf73e7a1099097242115042cb7b0
+    // id = 18
+    // be79b689fbacf0906e66cbf347234ae9
     @GetMapping("/upload")
     public String upload() {
         return "upload";

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
  * <h1>消费 Kafka 中的 PassTemplate</h1>
  * Created by Qinyi.
  */
+
 @Slf4j
 @Component
 public class ConsumePassTemplate {

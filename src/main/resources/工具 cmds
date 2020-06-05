@@ -1,0 +1,36 @@
+ 
+MYSQL: 
+
+cd C:\Program Files\MySQL\MySQL Server 8.0\bin & mysql -u root -p
+
+use database; select * from table; show tables; 
+
+
+REDIS: 
+
+cd C:\Redis & redis-server
+
+cd C:\Redis & redis-cli
+
+KEYS * , MGET key, smembers key
+
+
+KAFKA: 
+
+cd C:\kafka_2.12-2.1.0 & .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties (conflicts with hbase)
+
+cd C:\kafka_2.12-2.1.0 & .\bin\windows\kafka-server-start.bat .\config\server.properties
+
+cd C:\kafka_2.12-2.1.0 & .\bin\windows\kafka-console-consumer --bootstrap-server localhost:9092 --topic merchants-template --from-beginning
+
+
+HBASE: 
+
+http://127.0.0.1:16010/master-status
+
+cd C:\hadoop\hbase-1.2.6\bin & start-hbase
+
+cd C:\hadoop\hbase-1.2.6\bin & hbase shell
+
+list, desc table, scan table, truncate table
+

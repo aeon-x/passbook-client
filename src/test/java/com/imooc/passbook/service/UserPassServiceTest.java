@@ -19,40 +19,15 @@ public class UserPassServiceTest extends AbstractServiceTest {
     @Autowired
     private IUserPassService userPassService;
 
-//    {
-//        "data": [
-//        {
-//            "merchants": {
-//            "address": "北京市",
-//                    "businessLicenseUrl": "www.imooc.com",
-//                    "id": 9,
-//                    "isAudit": true,
-//                    "logoUrl": "www.imooc.com",
-//                    "name": "慕课",
-//                    "phone": "1234567890"
-//        },
-//            "pass": {
-//            "assignedDate": 1515513600000,
-//                    "templateId": "3617cf73e7a1099097242115042cb7b0",
-//                    "token": "token-1",
-//                    "userId": 149276
-//        },
-//            "passTemplate": {
-//            "background": 2,
-//                    "desc": "详情: 慕课",
-//                    "end": 1529424000000,
-//                    "hasToken": true,
-//                    "id": 9,
-//                    "limit": 9998,
-//                    "start": 1527696000000,
-//                    "summary": "简介: 慕课",
-//                    "title": "慕课-2"
-//        }
-//        }
-//  ],
-//        "errorCode": 0,
-//        "errorMsg": ""
-//    }
+// {"data":[
+//  {"merchants":
+//      {"address":"sg","businessLicenseUrl":"www.imooc.com","id":18,"isAudit":true,"logoUrl":"www.imooc.com","name":"test1","phone":"1234567890"},
+//  "pass":
+//      {"assignedDate":1578067200000,"rowKey":"3597219223370445580121163be79b689fbacf0906e66cbf347234ae9","templateId":"be79b689fbacf0906e66cbf347234ae9","token":"token-2","userId":127953},
+//  "passTemplate":
+//      {"background":2,"desc":"bbb","end":1592064000000,"hasToken":true,"id":18,"limit":9997,"start":1590336000000,"summary":"aaa","title":"test3"}}],
+//  "errorCode":0,"errorMsg":""}
+
     @Test
     public void testGetUserPassInfo() throws Exception {
 
@@ -70,40 +45,6 @@ public class UserPassServiceTest extends AbstractServiceTest {
         ));
     }
 
-//    {
-//        "data": [
-//        {
-//            "merchants": {
-//            "address": "北京市",
-//                    "businessLicenseUrl": "www.imooc.com",
-//                    "id": 9,
-//                    "isAudit": true,
-//                    "logoUrl": "www.imooc.com",
-//                    "name": "慕课",
-//                    "phone": "1234567890"
-//        },
-//            "pass": {
-//            "assignedDate": 1515513600000,
-//                    "templateId": "3617cf73e7a1099097242115042cb7b0",
-//                    "token": "token-1",
-//                    "userId": 149276
-//        },
-//            "passTemplate": {
-//            "background": 2,
-//                    "desc": "详情: 慕课",
-//                    "end": 1529424000000,
-//                    "hasToken": true,
-//                    "id": 9,
-//                    "limit": 9998,
-//                    "start": 1527696000000,
-//                    "summary": "简介: 慕课",
-//                    "title": "慕课-2"
-//        }
-//        }
-//  ],
-//        "errorCode": 0,
-//            "errorMsg": ""
-//    }
     @Test
     public void testGetUserAllPassInfo() throws Exception {
 
@@ -113,12 +54,13 @@ public class UserPassServiceTest extends AbstractServiceTest {
     }
 
     // {"errorCode":0,"errorMsg":""}
+
     @Test
     public void testUserUsePass() {
 
         Pass pass = new Pass();
         pass.setUserId(userId);
-        pass.setTemplateId("3617cf73e7a1099097242115042cb7b0");
+        pass.setTemplateId("be79b689fbacf0906e66cbf347234ae9");
 
         System.out.println(JSON.toJSONString(
                 userPassService.userUsePass(pass)
